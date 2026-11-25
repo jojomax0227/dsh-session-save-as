@@ -59,7 +59,12 @@ const EVENTS = [
 const document = sessionToDocument(EVENTS, { sessionId: 'sess-123', lang: 'zh', now: NOW })
 assert.equal(document.title, '重构插件架构')
 assert.match(document.subtitle, /sess-123/u)
-assert.match(document.subtitle, /2026-11-25 13:30/u)
+// The subtitle renders the Host's local time, so the expectation is computed
+// from the same Date instead of hardcoding a time-zone-specific clock string.
+const pad = (value) => String(value).padStart(2, '0')
+const expectedStamp = `${NOW.getFullYear()}-${pad(NOW.getMonth() + 1)}-${pad(NOW.getDate())} `
+  + `${pad(NOW.getHours())}:${pad(NOW.getMinutes())}`
+assert.ok(document.subtitle.includes(expectedStamp), `subtitle carries the local export time (${expectedStamp})`)
 const snapshot = JSON.stringify(document.blocks)
 assert.ok(snapshot.includes('请把'), 'user text is exported')
 assert.ok(!snapshot.includes('注入的上下文不应出现'), 'injected context is excluded')
