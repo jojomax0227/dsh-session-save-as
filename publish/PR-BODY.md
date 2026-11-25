@@ -1,6 +1,6 @@
 - [x] I added **one file** at `data/plugins/jojomax0227__dsh-session-save-as.yml` — that single file is the whole submission.
 - [x] My repo's `package.json` declares **`dsh.bundle`** (`dsh.bundle.patch: ./cordis.patch.yml`, plus `dsh.client` for the browser half).
-- [ ] My repo is at least **1 day old** — created `<YYYY-MM-DDTHH:mm:ssZ>`. Until it clears, CI re-runs by itself; no resubmission needed.
+- [ ] My repo is at least **1 day old** — created `2026-11-25T13:29:20Z`. Until it clears, CI re-runs by itself; no resubmission needed.
 - [x] `category: ui` — it adds an entry to the conversation header menu and exports a document from the Web UI.
 - [x] Description states what the plugin does, no superlatives.
 - [x] My repo has the `dsh-plugin` topic.
