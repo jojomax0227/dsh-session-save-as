@@ -1,0 +1,6 @@
+# Bundle patch: one Host row owns the /api/session.saveas route; the
+# `dsh.client` declaration in package.json makes the web app load ./client.js
+# as the browser half that contributes the header menu entry.
+- insert:
+    - id: session-save-as
+      name: dsh-session-save-as

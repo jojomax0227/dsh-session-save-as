@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "title": { "en": "jojomax0227 plugins", "zh": "jojomax0227 的插件" },
+  "description": {
+    "en": "Self-hosted index for plugins published by jojomax0227.",
+    "zh": "jojomax0227 发布的插件自建索引。"
+  },
+  "plugins": [
+    {
+      "name": "dsh-session-save-as",
+      "title": { "en": "Save session as", "zh": "会话另存为" },
+      "description": {
+        "en": "Adds Save as (PDF or Word) to the session more-actions menu and exports the conversation as a document.",
+        "zh": "在会话“更多操作”菜单中增加“另存为”，把会话内容导出为 PDF 或 Word 文档。"
+      },
+      "icon": "icons/session-save-as.svg",
+      "author": "jojomax0227",
+      "homepage": "https://github.com/jojomax0227/dsh-session-save-as#readme",
+      "repository": { "url": "https://github.com/jojomax0227/dsh-session-save-as" },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1795613082,
+          "source": { "type": "npm" },
+          "engines": { "dsh": ">=0.2.2-rc.5 <0.3.0" }
+        }
+      ]
+    }
+  ]
+}

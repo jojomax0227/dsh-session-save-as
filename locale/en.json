@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Save session as",
+    "description": "Adds Save as to the conversation header's more-actions menu (the ⋯ button), with PDF document (.pdf) and Word document (.docx) children. The exported file contains the session title, session ID and export time, then every user message and every visible assistant reply in order, keeping headings, lists, quotes, inline code, code blocks and tables. The menu shows progress, success and failure as toasts, and the browser decides where the file is saved. PDF output converts the generated Word document through the profile's mounted Office converter, so it needs office-kit with a working engine; when that is unavailable the menu says so and Word output still works. Reasoning blocks, tool calls and results, injected context, and image or file bytes are not part of the document. Only the selected session is exported, not its sub-sessions. Turning the bundle off removes the menu entry and the /api/session.saveas route; nothing else in the harness changes."
+  }
+}

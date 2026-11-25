@@ -1,0 +1,13 @@
+# Node and package-manager output
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+
+# Local test output (sample .docx/.pdf and rendered pages)
+out/
+
+# Release artifacts built by `pnpm pack` / the release workflow
+*.tgz
+
+# Plugin market generator cache, when an index is generated here
+.plugin-market-cache/

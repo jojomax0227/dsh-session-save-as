@@ -1,0 +1,7 @@
+url: https://github.com/jojomax0227/dsh-session-save-as
+name: jojomax0227/dsh-session-save-as
+category: ui
+tarball: https://github.com/jojomax0227/dsh-session-save-as/releases/latest/download/dsh-session-save-as.tgz
+description:
+  en: "Adds Save as to the conversation header's more-actions menu. It renders the session conversation as a Word (.docx) document and hands it to the browser, or converts the same document to PDF when the profile has the Office converter (office-kit) mounted. The document keeps the session title, user messages and the visible assistant replies, with headings, lists, quotes, code blocks and tables; tool calls, reasoning and attachment bytes are not included."
+  zh: "在会话标题栏“更多操作”菜单中增加“另存为”：把会话对话渲染成 Word（.docx）文档交给浏览器保存；profile 挂载了 Office 转换服务（office-kit）时，可把同一份文档转成 PDF。文档保留会话标题、用户消息与助手可见回复中的标题、列表、引用、代码块和表格；不含工具调用、推理过程和附件字节。"

@@ -1,0 +1,64 @@
+{
+  "name": "dsh-session-save-as",
+  "version": "0.1.0",
+  "description": "Adds Save as (PDF or Word) to the session more-actions menu and exports the conversation as a document.",
+  "type": "module",
+  "main": "index.js",
+  "icon": "./icon.svg",
+  "author": "jojomax0227",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jojomax0227/dsh-session-save-as.git"
+  },
+  "homepage": "https://github.com/jojomax0227/dsh-session-save-as#readme",
+  "bugs": {
+    "url": "https://github.com/jojomax0227/dsh-session-save-as/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.2-rc.5 <0.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-context-menu",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "pdf",
+    "docx",
+    "export"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

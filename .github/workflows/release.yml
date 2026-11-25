@@ -1,0 +1,30 @@
+name: release
+
+# Push a tag such as v0.1.0 and this publishes a stable-named tarball that the
+# plugin market entry installs from:
+#   https://github.com/jojomax0227/dsh-session-save-as/releases/latest/download/dsh-session-save-as.tgz
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  tarball:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Pack the bundle
+        run: npm pack
+      - name: Give the asset its stable name
+        run: mv dsh-session-save-as-*.tgz dsh-session-save-as.tgz
+      - name: Attach it to the release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dsh-session-save-as.tgz
+          generate_release_notes: true
